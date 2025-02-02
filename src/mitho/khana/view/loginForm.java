@@ -198,7 +198,7 @@ public class loginForm extends javax.swing.JFrame {
     String password = new String(PasswordField.getPassword()); // Use getPassword() for security
 
     // Check email and password
-    if(email.equals("harry@gmail.com") && password.equals("password")) {
+    if(email.equals("ram@gmail.com") && password.equals("password")) {
         JOptionPane.showMessageDialog(this, "Login Successful!");
 
         // Open dashboard only on success

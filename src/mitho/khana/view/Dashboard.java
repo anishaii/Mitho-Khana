@@ -73,7 +73,7 @@ public class Dashboard extends javax.swing.JFrame {
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(125, 125, 125)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 346, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(284, Short.MAX_VALUE))
+                .addContainerGap(314, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -88,7 +88,7 @@ public class Dashboard extends javax.swing.JFrame {
                 .addContainerGap(34, Short.MAX_VALUE))
         );
 
-        jPanel4.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 140));
+        jPanel4.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1030, 140));
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 102), 2), "Home Page", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Sylfaen", 1, 18))); // NOI18N
@@ -167,12 +167,27 @@ public class Dashboard extends javax.swing.JFrame {
         lunchButton.setFont(new java.awt.Font("Segoe Print", 1, 18)); // NOI18N
         lunchButton.setForeground(new java.awt.Color(255, 255, 255));
         lunchButton.setText("Lunch");
+        lunchButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lunchButtonMouseClicked(evt);
+            }
+        });
+        lunchButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                lunchButtonActionPerformed(evt);
+            }
+        });
         jPanel4.add(lunchButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 290, 140, 60));
 
         snackButton.setBackground(new java.awt.Color(0, 102, 102));
         snackButton.setFont(new java.awt.Font("Segoe Print", 1, 18)); // NOI18N
         snackButton.setForeground(new java.awt.Color(255, 255, 255));
         snackButton.setText("Snacks");
+        snackButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                snackButtonActionPerformed(evt);
+            }
+        });
         jPanel4.add(snackButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 290, 140, 60));
 
         dinnerButton.setBackground(new java.awt.Color(0, 102, 102));
@@ -223,6 +238,29 @@ public class Dashboard extends javax.swing.JFrame {
         this.dispose();
         
     }//GEN-LAST:event_breakfastButtonActionPerformed
+
+    private void lunchButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lunchButtonMouseClicked
+        // TODO add your handling code here:
+        Lunch lh = new Lunch();
+        lh.setVisible(true);
+        lh.pack();
+        lh.setLocationRelativeTo(null); 
+        this.dispose();
+    }//GEN-LAST:event_lunchButtonMouseClicked
+
+    private void lunchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lunchButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lunchButtonActionPerformed
+
+    private void snackButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_snackButtonActionPerformed
+        // TODO add your handling code here:
+        Snacks lh = new Snacks();
+        lh.setVisible(true);
+        lh.pack();
+        lh.setLocationRelativeTo(null); 
+        this.dispose();
+        
+    }//GEN-LAST:event_snackButtonActionPerformed
 
     /**
      * @param args the command line arguments
